@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #2b2e4a;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    width: 80%;
+    max-width: 500px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+label:hover {
+    color: #3468c0;
+}
+select {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    background: #f4f4f4;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease, transform 0.3s ease;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+select:focus {
+    box-shadow: 0 0 10px rgba(99, 172, 229, 0.7);
+    transform: scale(1.02);
+}
+select:hover {
+    background: #e8f0fe;
+    transform: translateY(-3px);
+}
+select option {
+    transition: background 0.3s ease;
+}
+select option:hover {
+    background-color: #d1e7f5;
+}
+button {
+    background: linear-gradient(to right, #63ace5, #4a69bd);
+    color: white;
+    border: none;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+button:hover {
+    background: linear-gradient(to right, #4a69bd, #3468c0);
+    box-shadow: 0 4px 15px rgba(52, 104, 192, 0.3);
+    transform: translateY(-5px);
+}
+button:active {
+    transform: translateY(0);
+}
+.output {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.7;
+    font-weight: 400;
+    color: #333;
+    background: #f9fafb;
+    border: 1px solid #d1e7f5;
+    padding: 1.5rem;
+    border-radius: 16px;
+    opacity: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s ease-in-out;
+}
+.output.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: scaleUp 0.8s ease-in-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

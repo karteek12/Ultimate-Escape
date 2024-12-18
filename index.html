@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Decision Tree</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌍Ultimate Escape! </h1>
+    <div class="form-section">
+      <!-- Mountain or Beach Preference -->
+      <label for="preference">🌄 Do you prefer the mountains or the beach?</label>
+      <select id="preference">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Beach">Beach</option>
+      </select>
+
+      <!-- Adventure or Relaxation -->
+      <label for="activity">⚡ Are you looking for adventure or relaxation?</label>
+      <select id="activity">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Relaxation">Relaxation</option>
+      </select>
+
+      <!-- Budget Selection -->
+      <label for="budget">💰 What’s your budget?</label>
+      <select id="budget">
+        <option value="" disabled selected>Select an option</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="submit-btn">🌟 Get Recommendation</button>
+    </div>
+    <div id="output" class="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
