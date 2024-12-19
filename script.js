@@ -41,22 +41,6 @@ const decisionTree = {
     const budget = document.getElementById("budget").value;
   
     const outputDiv = document.getElementById("output");
-  
-    if (!preference || !activity || !budget) {
-      outputDiv.textContent = "Please select all options!";
-      outputDiv.style.opacity = "1";
-      return;
-    }
-    const recommendation = generateRecommendation(preference, activity, budget);
-    outputDiv.textContent = recommendation;
-    outputDiv.style.opacity = "1";
-  });
-  document.getElementById("submit-btn").addEventListener("click", () => {
-    const preference = document.getElementById("preference").value;
-    const activity = document.getElementById("activity").value;
-    const budget = document.getElementById("budget").value;
-  
-    const outputDiv = document.getElementById("output");
     if (!preference || !activity || !budget) {
       outputDiv.textContent = "⚠️ Please select all options!";
       outputDiv.classList.add("visible");
